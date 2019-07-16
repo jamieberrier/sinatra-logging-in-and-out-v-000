@@ -7,7 +7,6 @@
   </head>
   <body id="page-top">
     <% if self.is_logged_in?(session) %>
-      <% binding.pry %>
       <h3> Welcome, <%= @user.username %></h3>
       <%= @user.balance %>
     <% else %>
