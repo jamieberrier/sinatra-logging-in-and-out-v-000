@@ -21,7 +21,6 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
-    binding.pry
     if @user
       erb :account
     else
