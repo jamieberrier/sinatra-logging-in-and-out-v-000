@@ -22,7 +22,11 @@ class ApplicationController < Sinatra::Base
 
   get '/account' do
     binding.pry
-    erb :account
+    if @user
+      erb :account
+    else
+      erb :error
+    end
   end
 
   get '/logout' do
