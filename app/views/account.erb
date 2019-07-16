@@ -9,8 +9,8 @@
     <% if Helpers.is_logged_in?(session) %>
     <% pry %>
       <% user = Helpers.current_user(session) %>
-      <h3> Welcome, <%= user %></h3>
-      <%= @user.balance %>
+      <h3> Welcome, <%= user.username %></h3>
+      <%= user.balance %>
     <% else %>
       <a href="/">Home Page</a>
     <% end %>
